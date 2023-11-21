@@ -53,20 +53,10 @@ pycom.rgbled(0xffd7000) # Status orange: partially working
 # Function to respond to messages from Adafruit IO
 def sub_cb(topic, msg):          # sub_cb means "callback subroutine"
     print((topic, msg))          # Outputs the message that was received. Debugging use.
-    if msg == b"1":             # If message says "ON" ...
+    if msg == "ON":             # If message says "ON" ...
         pycom.rgbled(0xff0000)   
-    elif msg == b"2":         
-        pycom.rgbled(0x00ff00)
-    elif msg == b"3":          
-        pycom.rgbled(0x0000ff)
-    elif msg == b"4":          
-        pycom.rgbled(0xff00ff)
-    elif msg == b"5":        
-        pycom.rgbled(0xffff00)
-    elif msg == b"6":        
-        pycom.rgbled(0x00ffff)
-    elif msg == b"0":          
-        pycom.rgbled(0x000000)   # ... then LED off
+    elif msg == "OFF":
+        pycom.rgbled(0x000000)
     else:                        # If any other message is received ...
         print("Unknown message") # ... do nothing but output that it happened.
 
