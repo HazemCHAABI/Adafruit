@@ -12,17 +12,17 @@ RANDOMS_INTERVAL = 5000 # milliseconds
 last_random_sent_ticks = 0  # milliseconds
 
 # Wireless network
-WIFI_SSID = "Galaxy Note10+2587"
-WIFI_PASS = "qilw3366" # No this is not our regular password. :)
+WIFI_SSID = 'Your_WiFi_SSID'
+WIFI_PASS = 'Your_WiFi_Password'
 
 # Adafruit IO (AIO) configuration
 AIO_SERVER = "io.adafruit.com"
 AIO_PORT = 1883
-AIO_USER = "HZM_911"
-AIO_KEY = "aio_XGcS98zHGmxvsF5duJ6W2S1dMelb"
+ADAFRUIT_USERNAME = 'Your_Username'
+ADAFRUIT_IO_KEY = 'Your_AIO_Key'
 AIO_CLIENT_ID = ubinascii.hexlify(machine.unique_id())  # Can be anything
-AIO_CONTROL_FEED = "HZM_911/feeds/lights"
-AIO_RANDOMS_FEED = "HZM_911/feeds/randoms"
+AIO_CONTROL_FEED = "uername/feeds/lights"
+AIO_RANDOMS_FEED = "username/feeds/randoms"
 
 # END SETTINGS
 
